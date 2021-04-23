@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css' >
+    <title>Wine Quality Prediction</title>
+</head>
+<body >
+    <div class = 'predict' style="background-image: url('https://c1.staticflickr.com/5/4124/5096953439_5a41df8055_b.jpg');background-size: 100% 105%;">
+        <h1 style="text-align:center;background-color:#db2a59;"><b>WINE QUALITY PREDICTION</b></h1>
+
+
+        <form action="{{url_for ('predict')}}" method="POST">
+            <label style="font-size:25px; ">Fixed Acidity (Range between 4.6 to 15.9)</label><br>
+            <input type="number" name = 'Fixed Acidity' style="width: 500px;font-size:15px;" placeholder="Fixed Acidity" required="required" step="any" ><br>
+
+            <label style="font-size:25px; ">Volatile Acidity (Range between 0.12 to 1.58)</label><br>
+            <input type="number" name="Volatile Acidity" style="width: 500px;font-size:15px;" placeholder="Volatile Acidity" required="required" step="any"><br>
+
+            <label style="font-size:25px; ">Citric Acid (Range between 0.0 to 1.0)</label><br>
+            <input type="number" name = 'Citric Acid' style="width: 500px;font-size:15px;" placeholder="Citric Acid" required="required" step="any" ><br>
+
+            <label style="font-size:25px; ">Residual Sugar (Range between 0.9 to 15.5)</label><br>
+            <input type="number" name="Residual Sugar" style="width: 500px;font-size:15px;" placeholder="Residual Sugar" required="required" step="any"><br>
+
+            <label style="font-size:25px; ">Chlorides (Range between 0.01 to 0.61)</label><br>
+            <input type="number" name = 'Chlorides' style="width: 500px;font-size:15px;" placeholder="Chlorides" required="required" step="any" ><br>
+
+            <label style="font-size:25px; ">Free Sulfur Dioxide (Range between 1.0 to 72.0)</label><br>
+            <input type="number" name="Free Sulfur Dioxide" style="width: 500px;font-size:15px;" placeholder="Free Sulfur Dioxide" required="required" step="any"><br>
+
+            <label style="font-size:25px; ">Total Sulfur Dioxide (Range between 6.0 to 289.0)</label><br>
+            <input type="number" name = 'Total Sulfur Dioxide' style="width: 500px;font-size:15px;" placeholder="Total Sulfur Dioxide" required="required" step="any" ><br>
+
+            <label style="font-size:25px; ">Density (Range between 0.9900 to 1.0000)</label><br>
+            <input type="number" name="Density" style="width: 500px;font-size:15px;" placeholder="Density" required="required" step="any"><br>
+
+            <label style="font-size:25px; ">pH (Range between 2.74 to 4.71)</label><br>
+            <input type="number" name = 'pH' style="width: 500px;font-size:15px;" placeholder="pH" required="required" step="any" ><br>
+
+            <label style="font-size:25px; ">Sulphates (Range between 0.33 to 2)</label><br>
+            <input type="number" name="Sulphates" style="width: 500px;font-size:15px;" placeholder="Sulphates" required="required" step="any"><br>
+
+            <label style="font-size:25px; ">Alcohol (Range between 8.4 to 14.9)</label><br>
+            <input type="number" name = 'Alcohol' style="width: 500px;font-size:15px;" placeholder="Alcohol" required="required" step="any" ><br>
+
+            <button type="reset" class="btn btn-primary btn-block btn-large" style="width: 254.5px;font-size:20px; background-color:grey;">Reset</button>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large" style="width: 254.5px;font-size:20px; background-color:#db2a59;" >Predict</button>
+        </form>
+        <br>
+        <br>
+        <hr>
+        <h1 style="background-color : #db2a59; "><b>{{ prediction_text }}</b></h1>
+
+    </div>
+</body>
+</html>
