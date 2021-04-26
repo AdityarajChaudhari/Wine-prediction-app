@@ -2,4 +2,4 @@ This application classifies Wine as Awesome Quality Wine or as Average Quality W
 
 # link of app :- https://wine-classification.herokuapp.com/
 
-![Alt text](wine qulaity gif)
+![Alt text](C:\Users\LEGION\Videos\Captures\wine qulaity gif.gif)
